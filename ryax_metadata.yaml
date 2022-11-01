@@ -6,7 +6,6 @@ spec:
   type: python3
   version: "3.0"
   logo: "logo.png"
-  detail: "First part of landmapR in python"
   categories:
     - Processor
   dependencies:
@@ -15,44 +14,44 @@ spec:
     - pythonPackages.numpy
     - pythonPackages.datar
   inputs:
-  - help: "DEM file"
-    human_name: "Elevation map"
+  - help: DEM file
+    human_name: Elevation map
     name: file
-    type: "file"
-  - help: "rows number"
-    human_name: "Number of rows of file"
+    type: file
+  - help: rows number
+    human_name: Number of rows of file"
     name: nrow
-    type: "integer"
-  - help: "cols number"
-    human_name: "Number of columns of file"
+    type: integer
+  - help: cols number
+    human_name: Number of columns of file
     name: ncol
-    type: "integer"
-  - help: "missing data value"
-    human_name: "Value used for missing data"
+    type: integer
+  - help: missing data value
+    human_name: Value used for missing data
     name: missing_value
-    type: "integer"    
-  - help: "pit maximum area"
-    human_name: "Maximum area of pit"
+    type: integer
+  - help: pit maximum area
+    human_name: Maximum area of pit
     name: max_area
-    type: "integer"
-  - help: "max depth"
-    human_name: "Maximum depth of pit"
+    type: integer
+  - help: max depth
+    human_name: Maximum depth of pit
     name: max_depth
-    type: "float"        
-  - help: "Print messages"
-    human_name: "Verbose"
+    type: float
+  - help: Print messages
+    human_name: Verbose
     name: verbose
-    type: "integer"
-  - help: "rows limits"
-    human_name: "Limits of rows to process"
+    type: integer
+  - help: rows limits
+    human_name: Limits of rows to process
     name: rlim
-    type: "integer"
-  - help: "cols limits"
-    human_name: "Limits of columns to process"
+    type: integer
+  - help: cols limits
+    human_name: Limits of columns to process
     name: clim
-    type: "integer"    
+    type: integer
   outputs:
-  - help: "Directory with outputs"
-    human_name: "Result directory"
+  - help: Directory with outputs
+    human_name: Result directory
     name: python_outputs
-    type: "directory"
+    type: directory
