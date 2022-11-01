@@ -52,7 +52,7 @@ spec:
     name: clim
     type: "integer"    
   outputs:
-  - help: "an integer to see the output logic"
-    human_name: "Successful code"
-    name: successful
-    type: "integer"
+  - help: "Directory with outputs"
+    human_name: "Result directory"
+    name: python_outputs
+    type: "directory"

@@ -37,8 +37,13 @@ def handle(module_input):
     arg7 = "output folder"
 
 
-    output_backup_folder = "../python_outputs/backup/"
-    output_stats_folder = "../python_outputs/flow/"
+    TMP_DIR = "/tmp"
+
+
+    output_backup_folder = TMP_DIR + "/python_outputs/backup/"
+    output_stats_folder = TMP_DIR + "/python_outputs/flow/"
+
+    out_directory = TMP_DIR + "/python_outputs"
 
     file = module_input["file"]     #"../../landmapr/LITAP/inst/extdata/testELEV.dbf"
     nrow = module_input["nrow"]
@@ -230,5 +235,5 @@ def handle(module_input):
 #     db_ilocal.to_csv(output_stats_folder+"dem_ilocal.csv",index=False)
     successful = 200
     
-    return {'successful' : successful}
+    return {'python_outputs' : out_directory}
     
