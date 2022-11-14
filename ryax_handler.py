@@ -25,7 +25,6 @@ from flow_pit_stat_fast import *
 from flow_remove_pit_fast import *
 from flow_slope_gc import *
 
-
 def handle(module_input):
 
     arg1 = "DEM file"
@@ -44,17 +43,18 @@ def handle(module_input):
     output_stats_folder = TMP_DIR + "/python_outputs/flow/"
 
     out_directory = TMP_DIR + "/python_outputs"
+    
+    file = module_input["input_file"]     #"../../landmapr/LITAP/inst/extdata/testELEV.dbf"
 
-    file = module_input["file"]     #"../../landmapr/LITAP/inst/extdata/testELEV.dbf"
-    nrow = module_input["nrow"]
-    ncol = module_input["ncol"]
-    missing_value = module_input["missing_value"]
-    clim = module_input["clim"]
-    rlim = module_input["rlim"]
-    verbose = module_input["verbose"]
+    nrow = module_input["hyperparameters"]["nrow"]
+    ncol = module_input["hyperparameters"]["ncol"]
+    missing_value = module_input["hyperparameters"]["nodata"]
+    clim = module_input["hyperparameters"]["clim"]
+    rlim = module_input["hyperparameters"]["rlim"]
+    verbose = module_input["hyperparameters"]["verbose"]
     resume = None
-    max_area = module_input["max_area"]
-    max_depth = module_input["max_depth"]
+    max_area = module_input["hyperparameters"]["max_area"]
+    max_depth = module_input["hyperparameters"]["max_depth"]
 
 
     if (resume==None): resume=""
@@ -236,4 +236,10 @@ def handle(module_input):
     successful = 200
     
     return {'python_outputs' : out_directory}
-    
+
+
+
+
+
+
+
