@@ -18,7 +18,7 @@ spec:
     human_name: Elevation map
     name: input_file
     type: file
-- help: hyperparameters json file
+  - help: hyperparameters json file
     human_name: hyperparameters json file
     name: input_json
     type: file
