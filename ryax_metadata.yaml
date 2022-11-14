@@ -20,7 +20,7 @@ spec:
     type: file
 - help: hyperparameters json file
     human_name: hyperparameters json file
-    name: input_jsons
+    name: input_json
     type: file
   outputs:
   - help: Directory with outputs
