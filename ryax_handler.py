@@ -80,7 +80,7 @@ def handle(module_input):
     #Calculate Directions
     if (resume=="" or resume=="directions"):
         db_dir = calc_ddir2(copy.copy(db_start),verbose=verbose)
-#         db_dir.to_csv(output_backup_folder+"dir.csv",index=False)
+        db_dir.to_csv(output_backup_folder+"dir.csv",index=False)
 
     #--------------------------------------------------------------------------------------------
 
@@ -100,8 +100,8 @@ def handle(module_input):
         # Calc stats for first vol2fl
         db_initial["db"] = calc_vol2fl(copy.copy(db_initial["db"]), i_stats = db_initial["stats"], verbose = verbose)
         
-#         db_initial["db"].to_csv(output_backup_folder+"initial.csv",index=False)
-#         db_initial["stats"].to_csv(output_stats_folder+"stats_initial.csv",index=False)
+        db_initial["db"].to_csv(output_backup_folder+"initial.csv",index=False)
+        db_initial["stats"].to_csv(output_stats_folder+"stats_initial.csv",index=False)
     ####     print(db_initial["db"].iloc[4400:4404])    
 
 
@@ -119,8 +119,8 @@ def handle(module_input):
             "stats" : stats_local
         }
         
-#         db_local["db"].to_csv(output_backup_folder+"local.csv",index=False)
-#         db_local["stats"].to_csv(output_stats_folder+"stats_local.csv",index=False)
+        db_local["db"].to_csv(output_backup_folder+"local.csv",index=False)
+        db_local["stats"].to_csv(output_stats_folder+"stats_local.csv",index=False)
     #### db_local
 
 
@@ -140,8 +140,8 @@ def handle(module_input):
             raise("TODO: check if this is correct")
             
             
-#         db_pond["db"].to_csv(output_backup_folder+"pond.csv",index=False)
-#         db_pond["stats"].to_csv(output_stats_folder+"stats_pond.csv",index=False)
+        db_pond["db"].to_csv(output_backup_folder+"pond.csv",index=False)
+        db_pond["stats"].to_csv(output_stats_folder+"stats_pond.csv",index=False)
             
 
 
@@ -166,8 +166,8 @@ def handle(module_input):
         # Calculate slope gradients and curvatures
         db_fill["db"] = slope_gc(copy.copy(db_fill["db"]), grid=1)
         
-#         db_fill["db"].to_csv(output_backup_folder+"fill.csv",index=False)
-#         db_fill["stats"].to_csv(output_stats_folder+"stats_fill.csv",index=False)       
+        db_fill["db"].to_csv(output_backup_folder+"fill.csv",index=False)
+        db_fill["stats"].to_csv(output_stats_folder+"stats_fill.csv",index=False)       
 
         #saving pit file TODO the savings and readings at some point
         if len(db_fill["stats"])>0:
@@ -177,8 +177,8 @@ def handle(module_input):
             pit["edge_pit"] = False
             pit = pit >> dplyr.arrange(f.shedno)
               
-#             db_fill["db"].to_csv(output_backup_folder+"pit.csv",index=False)
-#             pit.to_csv(output_stats_folder+"stats_pit.csv",index=False)       
+            db_fill["db"].to_csv(output_backup_folder+"pit.csv",index=False)
+            pit.to_csv(output_stats_folder+"stats_pit.csv",index=False)       
 
 
 
@@ -198,7 +198,7 @@ def handle(module_input):
         
         # Inverted Directions
         db_idir = calc_ddir2(db_invert, verbose=verbose)
-#         db_idir.to_csv(output_backup_folder+"idir.csv",index=False)
+        db_idir.to_csv(output_backup_folder+"idir.csv",index=False)
         
         
 
@@ -208,7 +208,7 @@ def handle(module_input):
     # Inverted Watersheds
     if(resume == "" or resume == "iwatersheds"):
         db_iinitial = calc_shed4(copy.copy(db_idir))
-#         db_iinitial.to_csv(output_backup_folder+"iinitial.csv",index=False)
+        db_iinitial.to_csv(output_backup_folder+"iinitial.csv",index=False)
 
 
 
@@ -225,14 +225,14 @@ def handle(module_input):
         ipit = pd.DataFrame()
 
         
-#     db_ilocal.to_csv(output_backup_folder+"ilocal.csv",index=False)
-#     ipit.to_csv(output_stats_folder+"stats_ilocal.csv",index=False)
+    db_ilocal.to_csv(output_backup_folder+"ilocal.csv",index=False)
+    ipit.to_csv(output_stats_folder+"stats_ilocal.csv",index=False)
 
 
     #--------------------------------------------------------------------------------------------
 
-#     db_fill["db"].to_csv(output_stats_folder+"dem_fill.csv",index=False)
-#     db_ilocal.to_csv(output_stats_folder+"dem_ilocal.csv",index=False)
+    db_fill["db"].to_csv(output_stats_folder+"dem_fill.csv",index=False)
+    db_ilocal.to_csv(output_stats_folder+"dem_ilocal.csv",index=False)
     successful = 200
     
     return {'python_outputs' : out_directory}
