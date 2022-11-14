@@ -14,6 +14,7 @@ from datar.all import f
 from itertools import compress
 import math
 import datar
+import os
 
 #import from other files
 from LITAP_functions import *
@@ -36,15 +37,24 @@ def handle(module_input):
     arg7 = "output folder"
 
 
-    TMP_DIR = "/tmp"
+    TMP_DIR = "/home/christos/Desktop"
 
 
     output_backup_folder = TMP_DIR + "/python_outputs/backup/"
     output_stats_folder = TMP_DIR + "/python_outputs/flow/"
-
+    
+    os.makedirs(TMP_DIR + "/python_outputs/backup/")
+    os.makedirs(TMP_DIR + "/python_outputs/flow/")
+    os.makedirs(TMP_DIR + "/python_outputs/form/")
+    os.makedirs(TMP_DIR + "/python_outputs/facer/")
+    
     out_directory = TMP_DIR + "/python_outputs"
     
     file = module_input["input_file"]     #"../../landmapr/LITAP/inst/extdata/testELEV.dbf"
+
+    
+    with open(module_input["input_json"], 'r') as f:
+          module_input = json.load(f)   
 
     nrow = module_input["hyperparameters"]["nrow"]
     ncol = module_input["hyperparameters"]["ncol"]
@@ -238,8 +248,17 @@ def handle(module_input):
     return {'python_outputs' : out_directory}
 
 
+# #%%
+
+# import json
 
 
+# f1 = {"input_json" :"/home/christos/Desktop/SCiO_Projects/REGALE/regale/code/flow_epirus_3_input_json.json",
+#       "input_file" : "/home/christos/Desktop/SCiO_Projects/REGALE/regale/data/epirus_dem_3_cropped.tif"
+#       }
 
+ 
+
+# t = handle(f1)  
 
 
