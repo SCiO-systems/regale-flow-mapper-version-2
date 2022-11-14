@@ -19,7 +19,7 @@ spec:
     name: file
     type: file
   - help: rows number
-    human_name: Number of rows of file"
+    human_name: Number of rows of file
     name: nrow
     type: integer
   - help: cols number
