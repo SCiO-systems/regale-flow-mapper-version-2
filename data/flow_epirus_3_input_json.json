@@ -1,0 +1,15 @@
+{
+  "input_file" : "/home/christos/Desktop/SCiO_Projects/REGALE/regale/data/epirus_dem_3_cropped.tif",
+  "hyperparameters": 
+  {
+      "nrow" : 72,
+      "ncol" : 110,
+      "nodata" : -9999,
+      "max_area" : 10,
+      "max_depth" : 3,
+      "output_folder" : "/home/christos/Desktop/SCiO_Projects/REGALE/regale/epirus_test_3_outputs/",
+      "verbose": false,
+      "clim" : null,
+      "rlim" : null
+    }
+}

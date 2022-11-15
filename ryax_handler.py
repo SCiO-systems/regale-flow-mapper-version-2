@@ -37,7 +37,7 @@ def handle(module_input):
     arg7 = "output folder"
 
 
-    TMP_DIR = "/home/christos/Desktop"
+    TMP_DIR = "/tmp"
 
 
     output_backup_folder = TMP_DIR + "/python_outputs/backup/"
