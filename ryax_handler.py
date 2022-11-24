@@ -55,10 +55,10 @@ def handle(module_input):
     max_area = data["hyperparameters"]["max_area"]
     max_depth = data["hyperparameters"]["max_depth"]
 
-    TMP_DIR = "/tmp/"
-    # TMP_DIR = "/home/christos/Desktop/SCiO_Projects/REGALE/regale-ryax-modules/"
+    # TMP_DIR = "/tmp/"
+    TMP_DIR = "/home/christos/Desktop/SCiO_Projects/REGALE/regale-ryax-modules/"
 
-    out_directory = TMP_DIR + "python_outputs/"
+    out_directory = TMP_DIR + "python_epirus_3_example_outputs/"
 
     output_flow_folder = out_directory + "flow/"
     output_backup_folder = out_directory + "backup/"
@@ -244,6 +244,9 @@ f1 = {"input_json" :"/home/christos/Desktop/SCiO_Projects/REGALE/regale-ryax-mod
   "input_file" : "/home/christos/Desktop/SCiO_Projects/REGALE/regale-ryax-modules/flow_mapper_version_2/data/epirus_dem_3_cropped.tif"
   }
 
+# f1 = {"input_json" :"/home/christos/Desktop/SCiO_Projects/REGALE/regale-ryax-modules/flow_mapper_version_2/data/flow_input_json.json",
+#   "input_file" : "/home/christos/Desktop/SCiO_Projects/REGALE/landmapr/LITAP/inst/extdata/testELEV.dbf"
+#   }
  
 
 t = handle(f1)  

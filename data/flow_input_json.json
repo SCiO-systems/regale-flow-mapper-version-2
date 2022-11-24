@@ -1,0 +1,14 @@
+{
+	"input_file" : "/home/christos/Desktop/SCiO_Projects/REGALE/landmapr/LITAP/inst/extdata/testELEV.dbf",
+	"hyperparameters" :
+	{
+		"nrow" : 90,
+		"ncol" : 90,
+		"nodata" : -9999,
+		"max_area" : 10,
+		"max_depth" : 0.5,
+		"verbose": false,
+		"clim" : null,
+		"rlim" : null
+	}
+}
